@@ -1,25 +1,62 @@
-/* Button Group Styling */
-.button-group {
-  text-align: center;
-  margin: 20px 0;
+/* Body layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: sans-serif;
 }
 
+.wrapper {
+  min-height: calc(100vh - 60px); /* Leaves space for footer */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+  background-color: #f0f8ff;
+}
+
+/* Button grid styling */
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button appearance */
 .category-btn {
-  background-color: #3498db;
-  color: white;
+  padding: 15px;
   border: none;
-  border-radius: 20px;
-  padding: 10px 20px;
-  margin: 10px;
+  border-radius: 12px;
+  background-color: #007bff;
+  color: white;
   font-size: 16px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .category-btn:hover {
-  background-color: #2980b9;
+  background-color: #0056b3;
 }
 
+/* Image grid */
+.image-grid {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Footer styling */
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 16px;
+  width: 100%;
+}
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -32,7 +69,7 @@
     font-size: 24px;
   }
 
-  .button-group {
+  .button-grid {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,6 +93,6 @@
 
   footer {
     font-size: 14px;
-    padding: 10px;
+    padding: 15px 10px;
   }
 }
