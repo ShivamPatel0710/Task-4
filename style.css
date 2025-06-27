@@ -1,0 +1,61 @@
+/* Button Group Styling */
+.button-group {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.category-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #2980b9;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .category-btn {
+    width: 90%;
+    margin: 8px 0;
+    font-size: 18px;
+  }
+
+  .image-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-grid img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  footer {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

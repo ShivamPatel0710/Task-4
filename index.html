@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Hub</title>
+    <linj rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gallery Hub</h1>
+        <hr>
+    </header>
+
+ <div class="button-group">
+    <button class="category-btn" onclick="filterCategory('nature')">Nature</button>
+    <button class="category-btn" onclick="filterCategory('technology')">Technology</button>
+    <button class="category-btn" onclick="filterCategory('travel')">Travel</button>
+    <button class="category-btn" onclick="filterCategory('food')">Food</button>
+  </div>
+
+
+    <main>
+        <section class="category" id="nature">
+                 <h2>Nature</h2>
+      <div class="image-grid">
+        <img src="Images/Nature1.webp" alt="Nature 1" />
+        <img src="Images/Nature2.webp" alt="Nature 2" />
+      </div>
+        </section>
+
+        <section class="category" id="technology">
+      <h2>Technology</h2>
+      <div class="image-grid">
+        <img src="Images/Technology1.webp" alt="Tech 1" />
+        <img src="Images/Technology2.webp" alt="Tech 2" />
+      </div>
+    </section>
+
+    <section class="category" id="travel">
+      <h2>Travel</h2>
+      <div class="image-grid">
+        <img src="Images/Travel1.webp" alt="Travel 1" />
+        <img src="Images/Travel2.webp" alt="Travel 2" />
+      </div>
+    </section>
+
+     <section class="category" id="food">
+      <h2>Food</h2>
+      <div class="image-grid">
+        <img src="Images/Food1.webp" alt="Food 1" />
+        <img src="Images/Food2.webp" alt="Food 2" />
+      </div>
+    </section>
+
+    </main>
+    <footer>
+        <p>Contact us: galleryhub@example.com | +91-9876543210</p>
+    </footer>
+
+      <!-- Script -->
+  <script>
+    function filterCategory(categoryId) {
+      const sections = document.querySelectorAll('.category');
+      sections.forEach(section => {
+        section.style.display = section.id === categoryId ? 'block' : 'none';
+      });
+    }
+
+    // Show only the first category on load
+    window.onload = () => filterCategory('nature');
+  </script>
+
+</body>
+</html>
